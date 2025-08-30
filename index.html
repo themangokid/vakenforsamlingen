@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Vakenförsamlingen</title>
+    <script>window.texme = { style: 'none' }</script>
+    <script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
+    <style>
+        /* Import Google Fonts for better Garamond */
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+        
+        /* Mobile-first base styles */
+        body {
+            font-family: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f5f0e6 0%, #e8d7b8 50%, #f0e6d2 100%);
+            font-size: 1.8em;
+            line-height: 1.4;
+            margin: 0;
+            padding: 10px;
+            min-height: 100vh;
+        }
+        
+        main {
+            font-family: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
+            background: rgba(245, 240, 230, 0.95);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            margin: 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        main h1 {
+            background: linear-gradient(45deg, #8B4513, #715201, #966d04);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 2.2em;
+            margin: 0.5em 0;
+            line-height: 1.2;
+            z-index:10;
+        }
+        
+        main h2 {
+            color: #8B4513;
+            border-bottom: 3px solid #B8860B;
+            padding-bottom: 0.3em;
+            margin: 1em 0 0.5em 0;
+            font-size: 1.4em;
+        }
+        
+        main h3 {
+            color: #A0522D;
+            margin: 0.8em 0 0.3em 0;
+            font-size: 1.2em;
+        }
+        
+        main p {
+            margin: 0.8em 0;
+            text-align: left;
+        }
+        
+        main ul, main ol {
+            margin: 0.8em 0;
+            padding-left: 1.2em;
+        }
+        
+        main li {
+            margin: 0.5em 0;
+        }
+        
+        main blockquote {
+            border-left: 5px solid #B8860B;
+            margin: 1em 0;
+            padding: 0.8em 1em;
+            background: rgba(184, 134, 11, 0.1);
+            border-radius: 0 6px 6px 0;
+            font-style: italic;
+            position: relative;
+            font-size: 1.1em;
+        }
+        
+        main blockquote::before {
+            content: '"';
+            font-size: 3em;
+            color: #B8860B;
+            position: absolute;
+            top: -0.1em;
+            left: 0.1em;
+            opacity: 0.3;
+        }
+        
+        main pre {
+            background: rgba(139, 69, 19, 0.1);
+            border: 2px solid #B8860B;
+            border-radius: 6px;
+            padding: 1em;
+            overflow-x: auto;
+            font-size: 0.9em;
+            margin: 1em 0;
+        }
+        
+        main a {
+            color: #8B4513;
+            text-decoration: none;
+            border-bottom: 2px solid #B8860B;
+            font-weight: 500;
+        }
+        
+        main table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+            font-size: 0.9em;
+        }
+        
+        main table th, main table td {
+            border: 2px solid #B8860B;
+            padding: 0.6em 0.4em;
+            text-align: left;
+        }
+        
+        main table th {
+            background: rgba(184, 134, 11, 0.2);
+            font-weight: 600;
+        }
+        
+        main img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1em 0;
+        }
+        
+        main hr {
+            border: none;
+            border-top: 3px solid #B8860B;
+            margin: 1.5em 0;
+        }
+        
+        /* Math expressions */
+        main .MathJax {
+            font-size: 1.2em !important;
+        }
+        
+        textarea {
+            background-color: #A9A9A9;
+            font-family: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
+            font-size: 1em;
+            line-height: 1.4;
+            padding: 15px;
+            width: 100%;
+            min-height: 600px;
+            border: none;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        
+        /* Tablet styles */
+        @media (min-width: 768px) {
+            body {
+                font-size: 1.5em;
+                padding: 20px;
+            }
+            
+            main {
+                max-width: 700px;
+                margin: 0 auto;
+                padding: 30px;
+                border-radius: 12px;
+            }
+            
+            main h1 {
+                font-size: 2.8em;
+            }
+            
+            textarea {
+                font-size: 1.1em;
+                padding: 20px;
+            }
+        }
+        
+        /* Desktop styles */
+        @media (min-width: 1024px) {
+            body {
+                font-size: 1.3em;
+                padding: 30px;
+            }
+            
+            main {
+                max-width: 800px;
+                padding: 40px;
+                border-radius: 15px;
+            }
+            
+            main h1 {
+                font-size: 3.2em;
+            }
+            
+            textarea {
+                font-size: 1.2em;
+                min-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <textarea>
+# Vakenförsamlingen
+
+## Om oss
+Vi riktar oss till **konspirationsteoretiker** och **new-age:are**.
+
+## Syfte
+- Samhörighet, gemenskap och lärljungaskap
+- Bibelläsning
+- Evangelisation
+
+## Contact Information
+**Email**: majorone@protonmail.com  
+![Small chapel](https://ichef.bbci.co.uk/news/1536/cpsprodpb/76DD/production/_133692403_twintowers.jpg.webp "Small title")
+
+    </textarea>
+</body>
+</html>
