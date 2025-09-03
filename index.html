@@ -155,6 +155,7 @@
         /* Email Button Styles */
         .email-button {
             display: inline-block;
+            justify-content: space-between;
             background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
             color: #f5f0e6 !important;
             padding: 12px 24px;
@@ -173,14 +174,13 @@
         }
 
         .email-button::before {
-            content: "✉";
             margin-right: 8px;
             font-size: 1.2em;
         }
 
         .email-button:hover, .email-button:focus {
             background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
-            transform: translateY(-2px);
+            transform: translateY(-1px);
             box-shadow: 0 6px 15px rgba(139, 69, 19, 0.4);
             padding: 12px 24px !important;
         }
@@ -311,36 +311,37 @@
             }
         }
 
-/* Tablets and small desktops */
-@media screen and (min-width: 769px) {
-    body {
-        font-size: 30px;
-        padding: 20px;
-    }
-    
-    main {
-        max-width: 700px;
-        padding: 30px;
-        border-radius: 15px;
-    }
-    
-    main h1 {
-        font-size: 3.15em;
-    }
-    
-    main h2 {
-        font-size: 2.25em;
-    }
-    
-    main table {
-        display: table;
-        font-size: 1.5em;
-    }
-    .email-button {
-        padding: 14px 28px;
-        font-size: 1.8em;
-    }
-}
+        /* Tablets and small desktops */
+        @media screen and (min-width: 769px) {
+            body {
+                font-size: 20px;
+                padding: 20px;
+            }
+            
+            main {
+                max-width: 700px;
+                padding: 30px;
+                border-radius: 15px;
+            }
+            
+            main h1 {
+                font-size: 2.1em;
+            }
+            
+            main h2 {
+                font-size: 1.5em;
+            }
+            
+            main table {
+                display: table;
+                font-size: 1em;
+            }
+
+            .email-button {
+                padding: 14px 28px;
+                font-size: 1.2em;
+            }
+        }
 
         /* Large desktops */
         @media screen and (min-width: 1024px) {
@@ -442,6 +443,7 @@
                 box-shadow: none !important;
             }
         }
+
     </style>
 </head>
 <body>
