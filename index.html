@@ -9,11 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <script>window.texme = { style: 'none' }</script>
     <script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
-       <style>
-        body {
-            font-family: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
-        }
-    </style>
+
     <style>
         /* Reset and base styles */
         * {
@@ -106,10 +102,21 @@
             position: relative;
             font-size: 1.1em;
         }
+        main blockquote:hover{
+            border-left: 4px solid #B8860B;
+            margin: 1.2em 0;
+            padding: 1em 1.2em;
+            background: rgba(184, 134, 11, 0.1);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            position: relative;
+            font-size: 1.1em;
+
+        }
 
         main blockquote::before {
             content: '"';
-            font-size: 2.2em;
+            font-size: 2.3em;
             color: #B8860B;
             position: absolute;
             top: -0.15em;
@@ -143,6 +150,44 @@
             background-color: rgba(184, 134, 11, 0.15);
             padding: 0 2px;
             border-radius: 2px;
+        }
+
+        /* Email Button Styles */
+        .email-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: #f5f0e6 !important;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none !important;
+            border: none !important;
+            border-bottom: none !important;
+            box-shadow: 0 4px 10px rgba(139, 69, 19, 0.3);
+            transition: all 0.3s ease;
+            margin: 1em 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .email-button::before {
+            content: "✉";
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .email-button:hover, .email-button:focus {
+            background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(139, 69, 19, 0.4);
+            padding: 12px 24px !important;
+        }
+
+        .email-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(139, 69, 19, 0.3);
         }
 
         main table {
@@ -237,6 +282,11 @@
                 font-size: 1.05em;
                 padding: 0.8em 1em;
             }
+
+            .email-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
         }
 
         /* Medium mobile to small tablets */
@@ -285,6 +335,11 @@
             main table {
                 display: table;
                 font-size: 1em;
+            }
+
+            .email-button {
+                padding: 14px 28px;
+                font-size: 1.2em;
             }
         }
 
@@ -344,6 +399,11 @@
             main p, main li {
                 margin: 0.6em 0;
             }
+
+            .email-button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
         }
 
         /* High DPI displays */
@@ -376,6 +436,12 @@
             main h2 {
                 font-size: 14pt;
             }
+
+            .email-button {
+                background: #8B4513 !important;
+                color: white !important;
+                box-shadow: none !important;
+            }
         }
     </style>
 </head>
@@ -393,10 +459,12 @@
 
 > Vi är helt övertygade om att räddningen inte ligger i våra egna händer eller i världen, utan i Jesus Kristus vår Herre.
 
-Om du vill vara med oss på nästa möte så maila ett sätt vi kan nå dig på. Eller om du bara har frågor, så går det också bra.
+Om du vill vara med oss på ett av våra möten så maila oss ett sätt vi kan nå dig på. Eller om du bara har frågor, så går det också bra.
 
 ## Kontakt 
-**Email**: majorone@protonmail.com  
+
+<a href="mailto:majorone@protonmail.com?subject=Vakenförsamlingen%20intresseanmälan" class="email-button">Kontakta oss via e-post</a>
+
 ![Small chapel](https://ichef.bbci.co.uk/news/1536/cpsprodpb/76DD/production/_133692403_twintowers.jpg.webp "7/11 was a part time job")
 
     </textarea>
