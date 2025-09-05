@@ -1,0 +1,429 @@
+ /* Reset and base styles */
+        * {
+            font-family: 'EB Garamond';
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Mobile-first base styles */
+        body {
+            background: linear-gradient(135deg, #f5f0e6 0%, #e8d7b8 50%, #f0e6d2 100%);
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 12px;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        main {
+            background: rgba(245, 240, 230, 0.95);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        main h1 {
+            color: #8B4513;
+            text-align: center;
+            font-size: 1.7em;
+            margin: 0.4em 0 0.6em 0;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        main h2 {
+            color: #8B4513;
+            border-bottom: 3px solid #B8860B;
+            padding-bottom: 0.4em;
+            margin: 1.2em 0 0.6em 0;
+            font-size: 1.40em;
+            font-weight: 600;
+        }
+
+        main h3 {
+            color: #A0522D;
+            margin: 1em 0 0.4em 0;
+            font-size: 1.15em;
+            font-weight: 500;
+        }
+
+        main p {
+            margin: 0.9em 0;
+            text-align: left;
+            font-size: 1.45em;
+        }
+
+        main ul, main ol {
+            margin: 0.9em 0;
+            padding-left: 1.4em;
+        }
+
+        main li {
+            margin: 0.5em 0;
+            line-height: 1.45;
+            font-size: 1.55em;
+        }
+
+        main blockquote {
+            border-left: 4px solid #B8860B;
+            margin: 1.2em 0;
+            padding: 1em 1.2em;
+            background: rgba(184, 134, 11, 0.1);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            position: relative;
+            font-size: 1.1em;
+        }
+        main blockquote:hover{
+            border-left: 4px solid #B8860B;
+            margin: 1.2em 0;
+            padding: 1em 1.2em;
+            background: rgba(184, 134, 11, 0.1);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            position: relative;
+            font-size: 1.1em;
+
+        }
+
+        main blockquote::before {
+            content: '"';
+            font-size: 2.3em;
+            color: #B8860B;
+            position: absolute;
+            top: -0.15em;
+            left: 0.1em;
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        main pre {
+            background: rgba(139, 69, 19, 0.1);
+            border: 2px solid #B8860B;
+            border-radius: 8px;
+            padding: 1em;
+            overflow-x: auto;
+            font-size: 0.9em;
+            margin: 1em 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        main a {
+            color: #8B4513;
+            text-decoration: none;
+            border-bottom: 2px solid #B8860B;
+            font-weight: 500;
+            word-wrap: break-word;
+            -webkit-tap-highlight-color: rgba(184, 134, 11, 0.3);
+        }
+
+        main a:hover, main a:focus {
+            background-color: rgba(184, 134, 11, 0.15);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* Email Button Styles */
+        .email-button {
+            display: inline-block;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: #f5f0e6 !important;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none !important;
+            border: none !important;
+            border-bottom: none !important;
+            box-shadow: 0 4px 10px rgba(139, 69, 19, 0.3);
+            transition: all 0.3s ease;
+            margin: 1em 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .email-button::before {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .email-button:hover, .email-button:focus {
+            background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 15px rgba(139, 69, 19, 0.4);
+            padding: 12px 24px !important;
+        }
+
+        .email-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(139, 69, 19, 0.3);
+        }
+
+        main table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+            font-size: 0.95em;
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        main table thead, main table tbody, main table tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        main table th, main table td {
+            border: 2px solid #B8860B;
+            padding: 0.6em 0.4em;
+            text-align: left;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        main table th {
+            background: rgba(184, 134, 11, 0.2);
+            font-weight: 600;
+        }
+
+        main img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 1.2em 0;
+            display: block;
+        }
+
+        main hr {
+            border: none;
+            border-top: 3px solid #B8860B;
+            margin: 1.8em 0;
+        }
+
+        main strong {
+            font-weight: 600;
+            color: #8B4513;
+        }
+
+        main em {
+            font-style: italic;
+            color: #A0522D;
+        }
+
+        /* Math expressions */
+        main .MathJax {
+            font-size: 1.1em !important;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        textarea {
+            display: none !important;
+        }
+
+        /* Small mobile adjustments */
+        @media screen and (max-width: 360px) {
+            body {
+                font-size: 16px;
+                padding: 8px;
+            }
+            
+            main {
+                padding: 12px;
+            }
+            
+            main h1 {
+                font-size: 1.5em;
+            }
+            
+            main h2 {
+                font-size: 1.25em;
+            }
+            
+            main p, main li {
+                font-size: 1em;
+            }
+            
+            main blockquote {
+                font-size: 1.05em;
+                padding: 0.8em 1em;
+            }
+
+            .email-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+
+        /* Medium mobile to small tablets */
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            body {
+                font-size: 19px;
+                padding: 16px;
+            }
+            
+            main {
+                max-width: 90%;
+                padding: 20px;
+                border-radius: 12px;
+            }
+            
+            main h1 {
+                font-size: 1.9em;
+            }
+            
+            main h2 {
+                font-size: 1.45em;
+            }
+        }
+
+        /* Tablets and small desktops */
+@media screen and (min-width: 769px) {
+    body {
+        font-size: 27px;
+        padding: 20px;
+    }
+    
+    main {
+        max-width: 700px;
+        padding: 30px;
+        border-radius: 15px;
+    }
+    
+    main h1 {
+        font-size: 3.15em;
+    }
+    
+    main h2 {
+        font-size: 2.25em;
+    }
+    
+    main table {
+        display: table;
+        font-size: 1.5em;
+    }
+    .email-button {
+        padding: 14px 28px;
+        font-size: 1.5em;
+    }
+}
+
+        /* Large desktops */
+        @media screen and (min-width: 1024px) {
+            body {
+                font-size: 21px;
+                padding: 30px;
+            }
+            
+            main {
+                max-width: 800px;
+                padding: 40px;
+            }
+            
+            main h1 {
+                font-size: 2.3em;
+            }
+            
+            main h2 {
+                font-size: 1.6em;
+            }
+        }
+
+        /* Extra large screens */
+        @media screen and (min-width: 1200px) {
+            body {
+                font-size: 22px;
+            }
+            
+            main h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        /* Landscape orientation fixes for small screens */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            body {
+                padding: 8px;
+                font-size: 16px;
+            }
+            
+            main {
+                padding: 12px;
+            }
+            
+            main h1 {
+                font-size: 1.4em;
+                margin: 0.3em 0 0.4em 0;
+            }
+            
+            main h2 {
+                font-size: 1.2em;
+                margin: 0.8em 0 0.4em 0;
+            }
+            
+            main p, main li {
+                margin: 0.6em 0;
+            }
+
+            .email-button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            main {
+                box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+                padding: 0;
+            }
+            
+            main {
+                background: white;
+                box-shadow: none;
+                max-width: none;
+                padding: 0;
+                border-radius: 0;
+            }
+            
+            main h1 {
+                font-size: 18pt;
+            }
+            
+            main h2 {
+                font-size: 14pt;
+            }
+
+            .email-button {
+                background: #8B4513 !important;
+                color: white !important;
+                box-shadow: none !important;
+            }
+        }
